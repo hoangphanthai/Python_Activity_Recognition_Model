@@ -1,0 +1,57 @@
+Train_Valid_Test DB table: sensor_data_hanna_35_hours
+Monitoring         DB table: sensor_data_lilith_35_hours
+/window_10000ms_stride_10000ms
+Labels to predict: Liegen Non-Liegen
+Functions list      : ['mean', 'stdev', 'RMS']
+Axes list             : ['gyrMag', 'accMag']
+------------------Round 1------------------
+Random Forest accuracy: 0.931
+Decision Tree accuracy: 0.9483
+------------------Round 2------------------
+Random Forest accuracy: 0.9138
+Decision Tree accuracy: 0.8966
+------------------Round 3------------------
+Random Forest accuracy: 0.9828
+Decision Tree accuracy: 0.9655
+------------------Round 4------------------
+Random Forest accuracy: 0.9825
+Decision Tree accuracy: 0.9649
+------------------Round 5------------------
+Random Forest accuracy: 1.0
+Decision Tree accuracy: 1.0
+
+Train_Valid 5-fold average accuracy of Random Forest: 0.962
+Train_Valid 5-fold average accuracy of Decision Tree: 0.9551
+------------------------------------------------------
+Accuracy of Random Forest on Test data: 0.9756
+Random Forest Confusion matrix on Test data
+Predicted ↓Liegen Non-Liegen ↓
+→True Liegen [72  5]
+→True Non-Liegen [  4 288]
+Random Forest Confusion matrix on Test data (4 labels) 
+Predicted ↓Liegen Gehen Grasen Stehen Non-Liegen ↓
+→True Liegen [72  0  0  0  5]
+→True Gehen [ 0  0  0  0 21]
+→True Grasen [  0   0   0   0 250]
+→True Stehen [ 4  0  0  0 17]
+→True Non-Liegen [0 0 0 0 0]
+------------------------------------------------------
+Accuracy of Decision Tree on Test data: 0.9621
+Decision Tree - Confusion matrix on Test data
+Predicted ↓Liegen Non-Liegen ↓
+→True Liegen [70  7]
+→True Non-Liegen [  7 285]
+------------------------------------------------------
+Accuracy of Random Forest on monitoring data: 0.8457
+Random Forest Confusion matrix on monitoring data
+Predicted ↓Liegen Non-Liegen ↓
+→True Liegen [230 163]
+→True Non-Liegen [ 34 850]
+Random Forest Confusion matrix on monitoring data (4 labels) 
+Predicted ↓Liegen Gehen Grasen Stehen Non-Liegen ↓
+→True Liegen [230   0   0   0 163]
+→True Gehen [ 2  0  0  0 81]
+→True Grasen [  0   0   0   0 716]
+→True Stehen [32  0  0  0 53]
+→True Non-Liegen [0 0 0 0 0]
+Decision Tree accuracy on Monitoring data: 0.78
