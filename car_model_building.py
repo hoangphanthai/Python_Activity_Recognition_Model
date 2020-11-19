@@ -1301,7 +1301,8 @@ def modelsfitting_clicked():
 
         conn = None
         try:
-            conn = psycopg2.connect(**params_db)
+                        
+            conn = psycopg2.connect(**params_db)                
             # create a cursor
             cur = conn.cursor()
 
@@ -1515,7 +1516,7 @@ def modelsfitting_clicked():
 
                     # Write infor to a text file ->
                     text_file = open(
-                        path_with_train_valid_test_table_name + hz_path + path_window + '/Train_Test_Result.txt', 'w')
+                        path_with_train_valid_test_table_name + hz_path + path_window + '/Train_Test_Result.txt', 'w',encoding='utf-8')
                     text_file.write('Train_Valid_Test DB table: ' + txtTrainTable_text.get())
                     text_file.write('\nMonitoring         DB table: ' + txtMonitoringTable_Text.get())
                     text_file.write('\n' + str(path_window))
@@ -2533,7 +2534,7 @@ def modelsfitting_clicked():
                         # Write result to a text file ->
                         text_file = open(
                             path_with_train_valid_test_table_name + hz_path + path_window + '/Train_Test_Result.txt',
-                            'w')
+                            'w', encoding='utf-8')
                         text_file.write('Train_Valid_Test DB table: ' + txtTrainTable_text.get())
                         text_file.write('\nMonitoring         DB table: ' + txtMonitoringTable_Text.get())
                         text_file.write('\n' + str(path_window))

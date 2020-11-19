@@ -1,0 +1,42 @@
+Train_Valid_Test DB table: cattle_test
+Monitoring         DB table: sensor_data_utalia_35_hours
+/window_10000ms_stride_10000ms
+Labels to predict: Grasen Non-Grasen
+Functions list      : ['mean', 'median', 'stdev']
+Axes list             : ['gyrMag', 'accMag']
+------------------Round 1------------------
+Random Forest accuracy: 0.8511
+Decision Tree accuracy: 0.766
+------------------Round 2------------------
+Random Forest accuracy: 0.7872
+Decision Tree accuracy: 0.8298
+------------------Round 3------------------
+Random Forest accuracy: 0.8696
+Decision Tree accuracy: 0.7826
+------------------Round 4------------------
+Random Forest accuracy: 0.8261
+Decision Tree accuracy: 0.8696
+------------------Round 5------------------
+Random Forest accuracy: 0.7826
+Decision Tree accuracy: 0.7609
+
+Train_Valid 5-fold average accuracy of Random Forest: 0.8233
+Train_Valid 5-fold average accuracy of Decision Tree: 0.8018
+------------------------------------------------------
+Accuracy of Random Forest on Test data: 0.8609
+Random Forest Confusion matrix on Test data
+Predicted ↓Grasen Non-Grasen ↓
+→True Grasen [189  26]
+→True Non-Grasen [11 40]
+Random Forest Confusion matrix on Test data (3 labels) 
+Predicted ↓Grasen Gehen Stehen Non-Grasen ↓
+→True Grasen [189   0   0  26]
+→True Gehen [11  0  0 14]
+→True Stehen [ 0  0  0 26]
+→True Non-Grasen [0 0 0 0]
+------------------------------------------------------
+Accuracy of Decision Tree on Test data: 0.8346
+Decision Tree - Confusion matrix on Test data
+Predicted ↓Grasen Non-Grasen ↓
+→True Grasen [185  30]
+→True Non-Grasen [14 37]
